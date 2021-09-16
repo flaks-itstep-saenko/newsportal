@@ -1,0 +1,12 @@
+{% extends 'base/master.html' %}
+
+{% block title %}Лента новостей{% endblock %}
+
+{% block content %}
+<div class="main-box">
+    <h2>Лента новостей</h2>
+    {% if 'user' in session and session ['user'] == 'admin123' %}
+        <a href="/news/create">Добавить новость</a>
+    {% endif %}
+</div>
+{% endblock %}
